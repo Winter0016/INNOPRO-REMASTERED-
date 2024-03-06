@@ -1,0 +1,47 @@
+.in-touch{
+    width:34vw;
+    height:auto;
+    margin-top:5vw;
+}
+.form{
+    display:flex;
+    margin-top: 2vw;
+    width:85vw;
+    height:52vw;
+}
+.write-form{
+    width:40vw;
+    margin-left:4vw;
+    border:solid;
+}
+.input-form{
+    margin-bottom:3vw;
+    width:80%;
+    height:4vw;
+    border-radius:5vw;
+    text-indent:1vw;
+    font-size:1.2vw;
+}
+.write-in{
+    margin-left:2vw;
+    font-size:1.8vw;
+    margin-bottom:0.6vw;
+    font-family:Poppin;
+    color: #8B0304;
+
+}
+.form-button{
+    width:17vw;
+    height:auto;
+}
+.write-form a:hover{
+    cursor:pointer;
+}
+.write-form button{
+    margin-top:1vw;
+}
+.uber{
+    width:45vw;
+    height:35vw;
+    margin-top:7vw;
+}

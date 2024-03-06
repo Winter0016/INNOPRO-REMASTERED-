@@ -1,0 +1,25 @@
+.product-title{
+    width:50vw;
+    height:10vw;
+    margin-top: 2vw;
+}
+.page-number{
+    display: flex;
+    justify-content: space-between;
+    width:40vw;
+    height:3.8vw;
+    margin-top: 2vw;
+}
+.page{
+    width:11vw;
+    border-radius:10px;
+    border:none;
+    background-color:rgb(255, 253, 253);
+    color:black;
+    box-shadow: 0 2px 2px 2px rgba(129, 129, 129, 0.514);
+}
+.page:hover{
+    cursor: pointer;
+    background-color: #43CB48;
+    color:white;
+}

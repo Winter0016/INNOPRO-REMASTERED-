@@ -1,0 +1,74 @@
+
+.checkout_container{
+  display:flex;
+  min-height:80vh;
+  border:solid;
+  border-color:pink;
+  padding-top:3vw;
+  padding-bottom:8vw;
+}
+
+.don_hang_hinhanh{
+  width:13vw;
+  height:auto;
+}
+
+.don_hang_container{
+  width:70vw;
+  height:fit-content;
+  border:solid;
+  border-color:yellow;
+}
+
+td{
+  text-align: center;
+}
+thead td{
+  font-size: 2vw;
+  font-style:italic;
+}
+
+table td{
+  padding-top:0.5vw;
+  padding-bottom:0.5vw;
+}
+table{
+  width:100%;
+  height:100%;
+  border-collapse: collapse;
+}
+tbody td{
+  font-size: 2vw;
+  border-bottom: 2px solid;
+}
+.checkout_total{
+  margin-left:8vw;
+  width:15vw;
+  height: 13vw;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout_total img{
+  width: 100%;
+  height:0.23vw;
+  margin-top:1vw;
+}
+.checkout_buy{
+  width:100%;
+  height:fit-content;
+  margin-top:1vw;
+  display:flex;
+  justify-content:flex-end;
+}
+.checkout_buy img{
+  width:16vw;
+  height:4vw;
+}
+.checkout_buy a:hover{
+  cursor: pointer;
+}
+tbody{
+  border:solid;
+}

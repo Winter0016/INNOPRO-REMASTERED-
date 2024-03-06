@@ -1,0 +1,94 @@
+
+.mylogo{
+    height:60px;
+}
+
+@media only screen and (min-width: 769px) {
+    /* Your CSS rules for larger screens */
+    .mylogo{
+        border:solid;
+        margin-right:40px;
+    }
+}
+
+
+.navbar-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-cart .bag{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50px;
+}
+
+.navbar-cart_area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:  rgba(0, 0, 0, 0.8);
+
+    z-index: 5;
+}
+
+.navbar-cart_area .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100vh;
+    background-color: gray;
+    transition: 5s ease;
+
+    border:solid;
+    display:flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.navbar-cart_area .sidebar .x1 {
+    width: 50px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.navbar-cart_area .sidebar .title {
+    padding-top: 50px;
+}
+
+.navbar-cart_area .sidebar .cartItems {
+    display: flex;
+}
+
+h1{
+    border:solid;
+    
+}
+
+@media screen and (max-width: 900px) {
+
+    .bag {
+        width: 5%;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .bag {
+        width: 8%;
+    }
+
+}
+.yourcartitem{
+    text-align: center;
+}
+

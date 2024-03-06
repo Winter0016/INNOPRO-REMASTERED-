@@ -1,0 +1,18 @@
+.body{
+    width:auto;
+    height:fit-content;
+    background-color: rgb(255, 255, 255);
+
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home{
+    height:45vw;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+}
