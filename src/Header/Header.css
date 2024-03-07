@@ -6,7 +6,7 @@
 @media only screen and (min-width: 769px) {
     /* Your CSS rules for larger screens */
     .mylogo{
-        border:solid;
+        /* border:solid; */
         margin-right:40px;
     }
 }
@@ -45,7 +45,7 @@
     background-color: gray;
     transition: 5s ease;
 
-    border:solid;
+    /* border:solid; */
     display:flex;
     flex-direction: column;
     z-index: 5;
@@ -68,10 +68,10 @@
     display: flex;
 }
 
-h1{
+/* h1{
     border:solid;
     
-}
+} */
 
 @media screen and (max-width: 900px) {
 

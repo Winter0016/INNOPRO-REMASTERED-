@@ -1,7 +1,8 @@
 .product-title{
     width:50vw;
     height:10vw;
-    margin-top: 2vw;
+    margin-top: 150px;
+    /* border:solid; */
 }
 .page-number{
     display: flex;

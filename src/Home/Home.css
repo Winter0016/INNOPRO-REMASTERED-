@@ -15,4 +15,6 @@
     display:flex;
     justify-content: space-between;
     position: relative;
+    top:120px;
+    /* border:solid; */
 }
