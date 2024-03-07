@@ -10,6 +10,7 @@ export const Checkout = () => {
    const {productlist} = useAuth()
   const { cartItems, getTotalCartAmount } = useAuth()
   const totalAmount = getTotalCartAmount();
+  const {submitorder} = useAuth();
   //console.log(`cartItem in checkout: ${JSON.stringify(cartItems)}`);
 
   return (
@@ -35,7 +36,7 @@ export const Checkout = () => {
          </table>
          <div className="checkout_buy">
             <a >
-               <img src={images.checkout_buy} alt="" />
+               <img onClick={() => submitorder()}src={images.checkout_buy} alt="" />
             </a>
          </div>    
       </div>

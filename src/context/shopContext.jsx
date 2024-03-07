@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import { auth, db } from "../myfirebase/firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection,addDoc,setDoc,updateDoc,doc } from "firebase/firestore";
 import { Toast } from "bootstrap";
 
 export const ShopContext = createContext(null);
@@ -91,6 +91,57 @@ export const ShopContextProvider = ({ children }) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
   };
 
+  const onsubmitproduct = async (product) => {
+    try {
+        const productDoc = doc(db, "orders", auth.currentUser.email);
+        const cartItemValue = cartItems[product.id] || 0; // Get the cart item value or default to 0 if undefined
+        const dataToUpdate = {
+            [product.id]: {
+                productName: product.name,
+                quantity: cartItemValue,
+                totalPrice: cartItemValue * product.price
+            }
+        };
+
+        await updateDoc(productDoc, dataToUpdate);
+        console.log("Document updated successfully");
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+  const makedoc = async () => {
+      try {
+        await setDoc(doc(db, 'orders', auth.currentUser.email), {}); // Set empty object as data
+        // console.log('Empty document created successfully');
+    } catch (err) {
+        console.error(err);
+    }
+  }
+
+  const productstotalprice = getTotalCartAmount();
+
+  const product_total = async () => {
+    try{
+      const productDoc2 = doc(db, "orders", auth.currentUser.email);
+      await updateDoc(productDoc2,{total : productstotalprice});
+    }catch(err){
+      console.log(err);
+    }
+  };
+
+  const submitorder = async () => {
+    console.log('submit order');
+    makedoc();
+    productlist.map((product) => {
+      if(cartItems[product.id] !== 0) {
+         onsubmitproduct(product);
+      }
+    })
+    await product_total();
+    alert('Purchased sucessfully'); 
+  }
+
   const contextValue = {
     userLoggedIn,
     isEmailUser,
@@ -102,6 +153,7 @@ export const ShopContextProvider = ({ children }) => {
     addToCart,
     removeFromCart,
     updateCartItemAmount,
+    submitorder,
   };
 
   return (
