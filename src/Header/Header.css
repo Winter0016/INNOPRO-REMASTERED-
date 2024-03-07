@@ -1,6 +1,7 @@
 
 .mylogo{
     height:60px;
+    border:solid;
 }
 
 @media only screen and (min-width: 769px) {
